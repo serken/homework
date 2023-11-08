@@ -6,6 +6,7 @@ DB = ActiveRecord::Base.establish_connection(
   :host => ENV['DB_HOST'],
   :username => ENV['DB_USER'],
   :password => ENV['DB_PASS'],
+  :port => 5455,
 )
 
 ActiveRecord::Base.connection.create_table(:articles, primary_key: 'id', force: true) do |t|
